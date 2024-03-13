@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "engines": {
-    "node" : "15.7.0",
-    "npm" : "7.4.3"
+    "node": "20.11.1",
+    "npm": "10.5.0"
   },
   "scripts": {
     "client-install": "npm install --prefix client",
@@ -19,6 +19,7 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",
+    "jquery": "^3.7.1",
     "mongoose": "^6.0.11",
     "nodemon": "^2.0.14",
     "stripe": "^8.184.0",

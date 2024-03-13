@@ -16,7 +16,7 @@ function App() {
     <div className="App">
 
          
-         
+
          <BrowserRouter>
              
              <ProtectedRoute path='/' exact component={Home} />

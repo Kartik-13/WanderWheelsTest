@@ -6,6 +6,7 @@ import { userLogin } from '../redux/actions/userActions'
 import AOS from 'aos';
 import Spinner from '../components/Spinner';
 import 'aos/dist/aos.css'; // You can also use <link> for styles
+// import carimg from '../pages/new-virtus-01.webp'   //D:\sheycars-udemy\client\public\new-virtus-01.webp
 // ..
 AOS.init();
 function Login() {
@@ -24,26 +25,29 @@ function Login() {
                 <Col lg={16} style={{position: 'relative'}}>
                     <img 
                     className='w-100'
-                    data-aos='slide-right'
+                    data-aos='slide-right' 
                     data-aos-duration='1500'
-                    src="https://images.unsplash.com/photo-1485291571150-772bcfc10da5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=928&q=80"/>
-                     <h1 className='login-logo'>SHEYCARS</h1>
+                    src= {'https://i.pinimg.com/originals/dc/19/e9/dc19e9b94a372ebc21ffeb7623d5632a.png'}/>
+                     <h1 className='login-logo'></h1>
                 </Col>
+                <h1 className="login-logo">WanderWheels</h1>
                 <Col lg={8} className='text-left p-5'>
-                    <Form layout='vertical' className='login-form p-5' onFinish={onFinish}>
+                    <Form  layout='vertical' className='login-form p-5 logp' onFinish={onFinish}>
                          <h1>Login</h1>
                          <hr />
-                         <Form.Item name='username' label='Username' rules={[{required: true}]}>
+                         <label for = "username" className = "fontSize">Username</label>
+                         <Form.Item  name='username' label='' rules={[{required: true}]}>
                              <Input/>
                          </Form.Item>
-                         <Form.Item name='password' label='Password' rules={[{required: true}]}>
+                         <label for = "password" className = "fontSize">Password</label>
+                         <Form.Item name='password' label='' rules={[{required: true}]}>
                              <Input type='password'/>
                          </Form.Item>
 
-                         <button className='btn1 mt-2'>Login</button>
+                         <button className='btn-lg mt-2 btn btn-outline-success' style = {{width:90,borderWidth:2}}>Login</button>
 
                          <hr />
-
+        
                          <Link to='/register'>Click Here to Register</Link>
                        
 

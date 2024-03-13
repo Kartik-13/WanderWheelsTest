@@ -4,7 +4,8 @@ import {message} from 'antd'
 export const userLogin=(reqObj)=>async dispatch=>{
     
     dispatch({type: 'LOADING' , payload:true})
-
+    
+    //setting user credential as 'user' localStorage
     try {
         const response = await axios.post('/api/users/login' , reqObj)
         localStorage.setItem('user' , JSON.stringify(response.data))
@@ -24,7 +25,7 @@ export const userLogin=(reqObj)=>async dispatch=>{
 export const userRegister=(reqObj)=>async dispatch=>{
     
     dispatch({type: 'LOADING' , payload:true})
-
+    //nevigating to login page
     try {
         const response = await axios.post('/api/users/register' , reqObj)
         message.success('Registration successfull')

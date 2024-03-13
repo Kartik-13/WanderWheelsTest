@@ -2,8 +2,10 @@ import React from "react";
 import { Menu, Dropdown, Button, Space , Row , Col } from "antd";
 import {Link} from 'react-router-dom'
 
+//For Common styling we use Bootstrap-cdn and for component we used antd
+//This page is default layout for all our pages and main content will be render in div className = "content" tag
 function DefaultLayout(props) {
-    const user = JSON.parse(localStorage.getItem('user'))
+    const user = JSON.parse(localStorage.getItem('user')) //Get current user
   const menu = (
     <Menu>
         <Menu.Item>
@@ -44,10 +46,10 @@ function DefaultLayout(props) {
           <Row gutter={16} justify='center'>
               <Col lg={20} sm={24} xs={24}>
               <div className="d-flex justify-content-between">
-             <h1 ><b><Link to='/' style={{color:'orangered'}}>SheyCars</Link></b></h1>
+             <h1><b><Link className = "text-logo" to='/' >WanderWheels</Link></b></h1>
 
-          <Dropdown overlay={menu} placement="bottomCenter">
-            <Button>{user.username}</Button>
+          <Dropdown className="hbutton" overlay={menu} placement="bottomCenter">
+            <Button className="hb">{user.username}</Button>
           </Dropdown>
         </div>
               </Col>
@@ -57,13 +59,12 @@ function DefaultLayout(props) {
       <div className="content">{props.children}</div>
 
       <div className="footer text-center">
-      <hr />
 
            <p>Desinged and Developed By</p>
 
            
 
-           <p>SHEY</p>
+           <p>WanderWheels</p>
           
       </div>
     </div>
